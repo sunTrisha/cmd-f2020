@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='cmd-f2020'
