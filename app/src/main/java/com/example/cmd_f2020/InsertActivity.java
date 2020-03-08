@@ -9,7 +9,7 @@ import android.widget.SeekBar;
 
 public class InsertActivity extends AppCompatActivity {
 
-    /*Button button;
+    Button button;
 
     SeekBar seekBar_red, seekBar_green, seekBar_blue;
 
@@ -90,5 +90,5 @@ public class InsertActivity extends AppCompatActivity {
 
             }
         });
-    }*/
+    }
 }
