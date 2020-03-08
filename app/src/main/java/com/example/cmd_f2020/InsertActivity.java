@@ -1,17 +1,3 @@
-/*package com.example.cmd_f2020;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-}*/
 package com.example.cmd_f2020;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,9 +7,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.SeekBar;
 
-public class MainActivity extends AppCompatActivity {
+public class InsertActivity extends AppCompatActivity {
 
-    Button button;
+    /*Button button;
 
     SeekBar seekBar_red, seekBar_green, seekBar_blue;
 
@@ -104,5 +90,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 }
