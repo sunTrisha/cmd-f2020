@@ -3,6 +3,7 @@ package com.example.cmd_f2020;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +15,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     //@Override
@@ -23,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //starting my stuff.
+
+        ProgressBar moodProgressBar = (ProgressBar) findViewById(R.id.moodProgressBar);
+        ProgressBar sleepProgressBar = (ProgressBar) findViewById(R.id.sleepProgressBar);
+        ProgressBar waterProgressBar = (ProgressBar) findViewById(R.id.waterProgressBar);
+        TextView notesTextView = (TextView) findViewById(R.id.notesTextView);
+
+
+        moodProgressBar.setMax(255);
+        sleepProgressBar.setMax(255);
+        waterProgressBar.setMax(255);
     }
     /*
     //Saving data in internal memory
