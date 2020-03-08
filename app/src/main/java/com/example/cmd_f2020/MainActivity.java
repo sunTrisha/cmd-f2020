@@ -45,16 +45,19 @@ public class MainActivity extends AppCompatActivity {
         Drawable progressDrawable = moodProgressBar.getProgressDrawable().mutate();
         progressDrawable.setColorFilter(Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
         moodProgressBar.setProgressDrawable(progressDrawable);
+        moodProgressBar.setProgress(7);
 
         sleepProgressBar.setMax(255);
         progressDrawable=sleepProgressBar.getProgressDrawable().mutate();
         progressDrawable.setColorFilter(Color.GREEN, android.graphics.PorterDuff.Mode.SRC_IN);
         sleepProgressBar.setProgressDrawable(progressDrawable);
+        sleepProgressBar.setProgress(200);
 
         waterProgressBar.setMax(255);
         progressDrawable=waterProgressBar.getProgressDrawable().mutate();
         progressDrawable.setColorFilter(Color.BLUE, android.graphics.PorterDuff.Mode.SRC_IN);
         waterProgressBar.setProgressDrawable(progressDrawable);
+        sleepProgressBar.setProgress(254);
     }
     /*
     //Saving data in internal memory
