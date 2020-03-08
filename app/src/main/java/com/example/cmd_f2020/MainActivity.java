@@ -2,6 +2,8 @@ package com.example.cmd_f2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import android.view.View;
@@ -39,8 +41,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         moodProgressBar.setMax(255);
+
+        Drawable progressDrawable = moodProgressBar.getProgressDrawable().mutate();
+        progressDrawable.setColorFilter(Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
+        moodProgressBar.setProgressDrawable(progressDrawable);
+
         sleepProgressBar.setMax(255);
+        progressDrawable=sleepProgressBar.getProgressDrawable().mutate();
+        progressDrawable.setColorFilter(Color.GREEN, android.graphics.PorterDuff.Mode.SRC_IN);
+        sleepProgressBar.setProgressDrawable(progressDrawable);
+
         waterProgressBar.setMax(255);
+        progressDrawable=waterProgressBar.getProgressDrawable().mutate();
+        progressDrawable.setColorFilter(Color.BLUE, android.graphics.PorterDuff.Mode.SRC_IN);
+        waterProgressBar.setProgressDrawable(progressDrawable);
     }
     /*
     //Saving data in internal memory
