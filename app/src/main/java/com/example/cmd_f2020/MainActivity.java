@@ -2,8 +2,10 @@ package com.example.cmd_f2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,15 +17,30 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
-
+    private Button buttonColoured;
     //@Override
     private static final String FILE_NAME = "example.txt";
 
     EditText mEditText;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        buttonColoured = (Button) findViewById(R.id.button);
+        buttonColoured.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openInsertActivity();
+            }
+        });
     }
+        public void openInsertActivity () {
+            Intent intent = new Intent(this, InsertActivity.class);
+            startActivity(intent);
+        }
+    }
+
     /*
     //Saving data in internal memory
     public void save(View V) {
