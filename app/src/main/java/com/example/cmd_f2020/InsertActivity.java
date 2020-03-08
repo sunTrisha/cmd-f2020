@@ -4,15 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.Toast;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class InsertActivity extends AppCompatActivity {
 
@@ -21,9 +14,6 @@ public class InsertActivity extends AppCompatActivity {
     SeekBar seekBar_red, seekBar_green, seekBar_blue;
 
     int red, green, blue;
-    private static final String FILE_NAME = "example.txt";
-
-    EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,35 +90,5 @@ public class InsertActivity extends AppCompatActivity {
 
             }
         });
-
-    }
-    public void save(View V){
-        String redT = Integer.toString(red);
-        String greenT = Integer.toString(green);
-        String blueT = Integer.toString(blue);
-        FileOutputStream fos = null;
-
-        try {
-            fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-            fos.write(redT.getBytes());
-            fos.write(greenT.getBytes());
-            fos.write(blueT.getBytes());
-
-            //mEditText.getText().clear();
-            Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,
-                    Toast.LENGTH_LONG).show();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (fos != null) {
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
     }
 }
